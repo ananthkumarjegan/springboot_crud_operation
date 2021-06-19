@@ -51,6 +51,7 @@ public class EmployeeServiceImpl implements EmployeeService {
 		Employee employeeById=null;
 		try {			
 		employeeById= employeeRepo.findById(empId).get();
+		System.out.println(employeeRepo.getValue(empId));
 		}catch(NoSuchElementException e) {
 			throw new NoSuchElementException("Somthing went wrong in service layer "+ e.getMessage());	
 		}
